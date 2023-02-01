@@ -8,7 +8,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.ezen.dto.BoardDTO;
 import com.ezen.entity.Board;
-import com.ezen.repository.BoardRepository;
+import com.ezen.persistence.BoardRepository;
+
+import java.util.Date;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -23,7 +25,7 @@ public class BoardRepositoryTest {
 		BoardDTO boardDTO = BoardDTO.builder()
 				.title("게시글 테스트 제목")
 				.content("게시글 테스트 내용")
-				.regdate(null)
+				.regdate(new Date())
 				.build();
 		
 		Board board = boardDTO.toEntity(boardDTO);
