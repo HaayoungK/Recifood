@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@ToString
+@ToString(exclude="foodList")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED) // 기본 생성자 접근 제한
 @AllArgsConstructor // 생성자 자동 생성
