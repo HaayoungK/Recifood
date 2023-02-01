@@ -7,41 +7,37 @@ import com.ezen.entity.Member;
 
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
+@Builder
 public class BoardDTO {
 
 	private Long board_seq;
 	private String title;
-//	private String writer; // member 객체가 있으므로 제거.
+	private String writer;
 	private String content;
 	private Date regdate;
-	
-	@Builder
-	public BoardDTO(Long board_seq, String title, Member member, String content, Date regdate) {
-		this.board_seq = board_seq;
-		this.title = title;
-		this.content = content;
-		this.regdate = regdate;
-	}
 	
 	public Board toEntity(BoardDTO dto) {
 		return Board.builder()
 				.board_seq(dto.board_seq)
 				.title(dto.title)
+				.writer(dto.writer)
 				.content(dto.content)
 				.regdate(dto.regdate)
 				.build();
 	}
 	
-	@ManyToOne
-	@JoinColumn(name="id", nullable=false)
-	private Member member;
-	
-	public void setMember(MemberDTO memberDTO) {
-		this.member = member;
-		memberDTO.getBoardList().add(this);
-	}
+//	@ManyToOne
+//	@JoinColumn(name="id", nullable=false)
+//	private Member member;
+//
+//	public void setMember(MemberDTO memberDTO) {
+//		this.member = member;
+//		memberDTO.getBoardList().add(this);
+//	}
 }

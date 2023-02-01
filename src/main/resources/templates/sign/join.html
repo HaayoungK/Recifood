@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="login/css/style.css">
+
+</head>
+<body>
+<section class="ftco-section">
+  회원가입 페이지
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5">
+            <div class="login-wrap p-4 p-md-5">
+
+                  <form>
+                      <div class="form-group">
+                          아이디 <input type="text" id="username" name="username">
+                          <input type="button" value="중복체크"><br>
+                          비밀번호 <input type="text" id="password" name="username"><br>
+                          비밀번호 확인 <input type="text" id="passwordCheck" name="username"><br>
+                          핸드폰번호 <input type="text" id="phone" name="username"><br>
+                          이메일 <input type="text" id="email" name="username"><br>
+                          우편번호 <input type="text" id="zip_num" name="username">
+                          <input type="button" value="우편번호 검색"><br>
+                          주소 <input type="text" id="address" name="username"><br>
+                          약관 <textarea rows="8" cols="50">약관 내용</textarea><br>
+                          <input type="radio" name="agree" checked>동의함 &nbsp;
+                          <input type="radio" name="agree">동의안함
+                          <div class="form-group d-flex align-items-center">
+                          <div class="w-100 d-flex justify-content-end">
+                              <button type="submit" class="btn btn-primary rounded submit">Join</button>
+                          </div>
+                          </div>
+                      </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+  </form>
+</section>
+  <script src="login/js/jquery.min.js"></script>
+  <script src="login/js/popper.js"></script>
+  <script src="login/js/bootstrap.min.js"></script>
+  <script src="login/js/main.js"></script>
+
+</body>
+</html>
